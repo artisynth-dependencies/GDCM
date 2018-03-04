@@ -41,7 +41,7 @@ const MacroEntry& Macro::GetMacroEntry(const Tag &tag) const
     return it->second;
     }
   // Not found anywhere :(
-  throw "Could not find Module for Tag requested";
+  throw Exception("Could not find Module for Tag requested");
 }
 
 bool Macro::Verify(const DataSet& ds, Usage const & usage) const

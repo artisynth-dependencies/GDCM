@@ -100,7 +100,7 @@ void TransferSyntaxSub::UpdateName( const char *name )
     }
 
   gdcmErrorMacro( "Invalid Name: " << name );
-  throw "Invalid Name";
+  throw Exception("Invalid Name");
 }
 
 void TransferSyntaxSub::SetNameFromUID( UIDs::TSName tsname )

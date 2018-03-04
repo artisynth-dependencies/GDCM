@@ -55,7 +55,7 @@ public:
       {
       // Bug_Siemens_PrivateIconNoItem.dcm
       gdcmDebugMacro( "Could be Bug_Siemens_PrivateIconNoItem.dcm" );
-      throw "SIEMENS Icon thingy";
+      throw Exception("SIEMENS Icon thingy");
       }
     if( !ValueLengthField.Read<TSwap>(is) )
       {

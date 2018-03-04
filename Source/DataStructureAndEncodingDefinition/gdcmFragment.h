@@ -135,7 +135,7 @@ public:
         if( offset > max )
           {
           gdcmErrorMacro( "Giving up" );
-          throw "Impossible to backtrack";
+          throw Exception("Impossible to backtrack");
           return is;
           }
         }

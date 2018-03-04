@@ -66,7 +66,7 @@ const ModuleEntry& Module::GetModuleEntryInMacros(Macros const &macros, const Ta
   // start with easy case:
   if( ArrayIncludeMacros.empty() )
     {
-    throw "Could not find Module for Tag requested";
+    throw Exception("Could not find Module for Tag requested");
     }
 
   // we need to loop over all Included-Macro:
@@ -85,7 +85,7 @@ const ModuleEntry& Module::GetModuleEntryInMacros(Macros const &macros, const Ta
       }
     }
   // Not found anywhere :(
-  throw "Could not find Module for Tag requested";
+  throw Exception("Could not find Module for Tag requested");
 }
 
 bool Module::Verify(const DataSet& ds, Usage const & usage) const

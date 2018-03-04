@@ -92,7 +92,7 @@ void AbstractSyntax::UpdateName( const char *name )
     }
 
   gdcmErrorMacro( "Invalid Name: " << name );
-  throw "Invalid Name";
+  throw Exception("Invalid Name");
 }
 
 void AbstractSyntax::SetNameFromUID( UIDs::TSName tsname )

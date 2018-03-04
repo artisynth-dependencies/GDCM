@@ -121,7 +121,7 @@ std::istream& ReadPreValue(std::istream &is)
       }
     else
       {
-      throw "Catch me if you can";
+      throw Exception("Catch me if you can");
       //assert(0);
       }
     }

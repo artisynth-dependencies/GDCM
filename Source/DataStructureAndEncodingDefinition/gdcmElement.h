@@ -277,7 +277,7 @@ std::string to_string ( Float data ) {
   if ( in << std::dec << std::setprecision(/*2+*/digits) << data ) {
     return ( in.str() );
   } else {
-    throw "Impossible Conversion"; // should not happen ...
+    throw Exception("Impossible Conversion"); // should not happen ...
   }
 }
 #else

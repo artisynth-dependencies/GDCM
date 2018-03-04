@@ -167,7 +167,7 @@ public:
         if( l > SequenceLengthField )
           {
           gdcmDebugMacro( "Found: Length of Item larger than expected" )
-          throw "Length of Item larger than expected";
+          throw Exception("Length of Item larger than expected");
           }
         assert( l <= SequenceLengthField );
         //std::cerr << "sqi debug len: " << is.tellg() << " " <<  l << " " <<  SequenceLengthField << std::endl;

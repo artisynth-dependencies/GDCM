@@ -2079,7 +2079,7 @@ void ImageHelper::SetRescaleInterceptSlopeValue(File & f, const Image & img)
     {
     if( img.GetIntercept() != 0. || img.GetSlope() != 1. )
       {
-      throw "Impossible"; // Please report
+      throw Exception("Impossible"); // Please report
       }
     return;
     }

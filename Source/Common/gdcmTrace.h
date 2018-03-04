@@ -215,7 +215,7 @@ private:
    osmacro << "Assert: In " __FILE__ ", line " << __LINE__        \
            << ", function " << GDCM_FUNCTION                      \
            << "\n\n";                                             \
-   throw osmacro.str();                                           \
+   throw Exception(osmacro.str().c_str());                        \
    }                                                              \
 }
 #else

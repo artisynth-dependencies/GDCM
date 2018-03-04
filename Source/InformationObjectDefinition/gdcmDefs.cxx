@@ -253,7 +253,7 @@ const IOD& Defs::GetIODFromFile(const File& file) const
   if( !iodname )
     {
     gdcmErrorMacro( "Not implemented: " << ms );
-    throw "Not Implemented";
+    throw Exception("Not Implemented");
     }
   const IOD &iod = iods.GetIOD( iodname );
   return iod;
