@@ -26,6 +26,26 @@
 %}
 #endif
 
+// exception handler
+// Language independent exception handler
+%include exception.i       
+
+%exception {
+    try {
+        $action
+    } catch (gdcm::Exception e) {
+        SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (std::exception e) {
+        SWIG_exception(SWIG_RuntimeError, e.what());
+    } catch (const char* str) {
+        SWIG_exception(SWIG_RuntimeError, str);
+    } catch (std::string str) {
+        SWIG_exception(SWIG_RuntimeError, str.c_str());
+    } catch(...) {
+        SWIG_exception(SWIG_RuntimeError,"Unknown exception");
+    }
+}
+
 %{
 #include "gdcmTypes.h"
 #include "gdcmASN1.h"
