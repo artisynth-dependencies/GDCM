@@ -5,7 +5,7 @@ endif()
 
 find_package(SWIG REQUIRED)
 include(${SWIG_USE_FILE})
-option(GDCM_AUTOLOAD_GDCMJNI "Automatically load gdcmjni" ON)
+option(GDCM_AUTOLOAD_GDCMJNI "Automatically load gdcmjni" OFF)
 option(GDCM_JAVA_INCLUDE_SRC "Add source (*.java) to jar file" OFF)
 option(GDCM_BUILD_FULL_JAVA_JAR "Build gdcm jar with encapsulated gdcmjni" OFF)
 mark_as_advanced(GDCM_AUTOLOAD_GDCMJNI GDCM_JAVA_INCLUDE_SRC GDCM_BUILD_FULL_JAVA_JAR)
@@ -36,7 +36,7 @@ set(CMAKE_SWIG_OUTDIR "${GDCM_JAVA_HOME}")
 set(CMAKE_SWIG_FLAGS "-package gdcm")
 separate_arguments(CMAKE_SWIG_FLAGS)
 # http://www.debian.org/doc/packaging-manuals/java-policy/x105.html
-SWIG_ADD_MODULE(gdcmjni java gdcm.i)
+SWIG_ADD_LIBRARY(gdcmjni java gdcm.i)
 SWIG_LINK_LIBRARIES(gdcmjni gdcmMSFF
   gdcmMEXD
   # There is no real point in linking explicitly to jni libraries. This is a java module

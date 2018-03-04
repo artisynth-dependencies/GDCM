@@ -1,3 +1,17 @@
+For ArtiSynth releases, 
+ - build with 
+    CMAKE_C_FLAGS   -static
+    CMAKE_CXX_FLAGS -static
+ - enable
+    BUILD_JAVA
+    GDCM_WRAP_JAVA
+    GDCM_JAVA_INCLUDE_SRC
+ - disable
+    GDCM_AUTOLOAD_GDCMJNI
+    GDCM_BUILD_DOCBOOK_MANPAGES
+
+=======================================================================
+
 This is the source code of GDCM. It is available from sf.net website.
 Official GIT repository is at:
 

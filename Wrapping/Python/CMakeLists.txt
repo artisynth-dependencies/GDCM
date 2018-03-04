@@ -95,7 +95,7 @@ endif()
 # the other gdcm lib. bad !!!
 #set (SWIG_MODULE_${MODULE_NAME}_EXTRA_DEPS ${SWIG_MODULE_${MODULE_NAME}_EXTRA_DEPS} ${CMAKE_CURRENT_SOURCE_DIR}/docstrings.i)
 if (${CMAKE_VERSION} VERSION_LESS "3.8.0")
-  SWIG_ADD_MODULE(${GDCM_PYTHON_IMPLEMENTATION_NAME} python gdcmswig.i gdcmPythonFilter.cxx)
+  SWIG_ADD_LIBRARY(${GDCM_PYTHON_IMPLEMENTATION_NAME} python gdcmswig.i gdcmPythonFilter.cxx)
 else()
   SWIG_ADD_LIBRARY(
     ${GDCM_PYTHON_IMPLEMENTATION_NAME}
