@@ -22,7 +22,7 @@ include_directories(
 set_source_files_properties(gdcm.i PROPERTIES CPLUSPLUS ON)
 
 # TODO check convetion for perl module name:
-SWIG_ADD_LIBRARY(perl_gdcm perl gdcm.i)
+SWIG_ADD_LIBRARY(perl_gdcm LANGUAGE perl SOURCES gdcm.i)
 SWIG_LINK_LIBRARIES(perl_gdcm gdcmMSFF)
 
 #set_target_properties(${SWIG_MODULE_perl_gdcm_REAL_NAME} PROPERTIES LINK_INTERFACE_LIBRARIES "")
