@@ -225,7 +225,7 @@ ${CMAKE_CURRENT_BINARY_DIR}/latex/Makefile
   endif()
 endif()
 
-option(GDCM_BUILD_DOCBOOK_MANPAGES "Build man pages from XML docbook ?" ON)
+option(GDCM_BUILD_DOCBOOK_MANPAGES "Build man pages from XML docbook ?" OFF)
 mark_as_advanced(GDCM_BUILD_DOCBOOK_MANPAGES)
 if(GDCM_BUILD_DOCBOOK_MANPAGES)
 set(MANPAGES_XML
