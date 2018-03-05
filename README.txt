@@ -1,11 +1,10 @@
-For ArtiSynth releases, 
- - build with 
-    CMAKE_C_FLAGS   -static
-    CMAKE_CXX_FLAGS -static
+This version of GDCM has been modified to be compiled for ArtiSynth.
+
+Some exceptions have been wrapped to prevent JVM crashes, and compile
+defaults have been set:
+
  - enable
-    BUILD_JAVA
     GDCM_WRAP_JAVA
-    GDCM_JAVA_INCLUDE_SRC
  - disable
     GDCM_AUTOLOAD_GDCMJNI
     GDCM_BUILD_DOCBOOK_MANPAGES
