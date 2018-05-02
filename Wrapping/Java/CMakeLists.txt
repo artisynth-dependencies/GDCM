@@ -20,6 +20,12 @@ include_directories(
   "${GDCM_SOURCE_DIR}/Source/MessageExchangeDefinition"
 )
 
+# static c/c++ libraries
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static -static-libgcc")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -static-libgcc -static")
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static -static-libstdc++ -static-libgcc")
+
+
 # $ export JAVA_HOME=/usr/lib/j2sdk1.6-sun/
 # $ export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun/
 find_package(Java ${GDCM_DEFAULT_JAVA_VERSION} REQUIRED) # javac, jar
